@@ -4,3 +4,4 @@
 
 - 15.02 - Setup for PHP and fix for dev.local
 - 17.02 - Simple comparation
+- 18.02 - Simple array
