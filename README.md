@@ -4,4 +4,5 @@
 
 - 15.02 - Setup for PHP and fix for dev.local
 - 17.02 - Simple comparation
-- 18.02 - Simple array
+- 18.02 - /sandbox/ Simple array
+- 19.02 - /sandbox/ Array test1902, test1902_2
