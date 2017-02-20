@@ -14,9 +14,9 @@ $password = "password";
 	if(isset($_POST['password'])&&!empty($_POST['password'])){
 	echo "Submitted and filled."."<br/>";
 
+	$password_post = $_POST['password'];
 
-
-	if($_POST['password']==$password){
+	if($password_post == $password){
 		echo "They are same";
 	}else {
 		echo "Not the same";
