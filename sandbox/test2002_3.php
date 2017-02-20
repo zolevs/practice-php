@@ -17,10 +17,11 @@ $age = $_GET['age'];
 
 if (isset($name) && isset($age)){
 	if(!empty($name)&&!empty($age))
-	echo $name."<br/>";
-	echo $age."<br/>";
-} else  {
-	echo "error";
-}
-
+	{
+		echo $name."<br/>";
+		echo $age."<br/>";
+	} else  {
+		echo "error";
+	};
+};
  ?>
