@@ -1,10 +1,22 @@
 <?php
 
-echo $_COOKIE['name']." is ".$_COOKIE['age'];
-echo "<br/>";
-print_r($_COOKIE);
+$exp = time()+86400;
+$exp_unset = time()-86400;
 
-// $exp = time()+86400;
+// unset cookie
+setcookie("age","",$exp_unset);
+
+if(isset($_COOKIE['age'])){
+	echo "Cookie is set.";
+} else {
+	echo "Cookie is not set";
+}
+
+
+// echo $_COOKIE['name']." is ".$_COOKIE['age'];
+// echo "<br/>";
+// print_r($_COOKIE);
+
 
 // setcookie("age", 42, $exp);
 
