@@ -13,3 +13,5 @@
 - 22.02 - /sandbox/ test2202
 - 23.02 - /sandbox/ test2302 cookies set, cookies unset
 - 23.02 - /sandbox/ test2302_2 radio box
+- 24.02 - /sandbox/ test2402 retriving data form an image map
+- 24.02 - /sandbox/ test2402_2 and file2402_3 - read file and dump
