@@ -15,7 +15,7 @@
 
 	<script type="text/javascript">
 		function button1(){
-			document.form1.Button2.value = "Button 1a"
+			document.form1.Button.value = "Button 1a"
 			form1.submit()
 		}
 		function button2(){
