@@ -1,3 +1,51 @@
+<?php
+
+	// Number format
+	$number = 1002000;
+	$numberFormat = number_format($number,0);
+	echo "You have ".$numberFormat." pounds."."<br/>";
+
+	// Number format - decimal places
+
+	$pi = pi();
+	$pi_short = number_format($pi, 3);
+	echo $pi_short;
+ ?>
+
+
+<?php
+
+// // trim (sa obe strane skida prazno) - trimr (sa desne) - triml (sa leve)
+
+// $name = "Michale ";
+// echo strlen($name)."<br/>";
+// echo strlen(trim($name));
+
+// if (strlen($name)>10) {
+// 	echo "Your name is to loog";
+// } else {
+// 	echo "Your name is just right.";
+// }
+
+ ?>
+
+<?php
+	// // htmlentities
+	// $from_db = '<script> alert ("Hello"); <script>';
+	// $sanatized = htmlentities($from_db);
+
+	// echo $sanatized;
+ ?>
+
+<!-- &quot; -->
+
+<?php
+
+	// $name = "TestIt";
+
+	// echo strtolower($name);
+
+ ?>
 
 
 <?php
