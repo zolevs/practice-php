@@ -1,6 +1,6 @@
 # practice-php
 
-### Directory for some kind of refreshener for PHP
+### Directory for some random PHP writing
 
 - 15.02 - Setup for PHP and fix for dev.local
 - 17.02 - Simple comparation
@@ -15,4 +15,4 @@
 - 23.02 - /sandbox/ test2302_2 radio box
 - 24.02 - /sandbox/ test2402 retriving data form an image map
 - 24.02 - /sandbox/ test2402_2 and file2402_3 - read file and dump
-
+- 25.02 - /sandbox/ test2502  test2502_2 test2502_3 - buttons
