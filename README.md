@@ -16,3 +16,5 @@
 - 24.02 - /sandbox/ test2402 retriving data form an image map
 - 24.02 - /sandbox/ test2402_2 and file2402_3 - read file and dump
 - 25.02 - /sandbox/ test2502  test2502_2 test2502_3 - buttons
+- 26.02 - /sandbox/ test2602 - string function
+- 27.02 - /sandbox/ test2702 - string function
