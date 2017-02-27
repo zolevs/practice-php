@@ -1,15 +1,26 @@
 <?php
 
-	// Number format
-	$number = 1002000;
-	$numberFormat = number_format($number,0);
-	echo "You have ".$numberFormat." pounds."."<br/>";
+// nl2br
 
-	// Number format - decimal places
+// new line to break
 
-	$pi = pi();
-	$pi_short = number_format($pi, 3);
-	echo $pi_short;
+ ?>
+
+
+
+
+<?php
+
+	// // Number format
+	// $number = 1002000;
+	// $numberFormat = number_format($number,0);
+	// echo "You have ".$numberFormat." pounds."."<br/>";
+
+	// // Number format - decimal places
+
+	// $pi = pi();
+	// $pi_short = number_format($pi, 3);
+	// echo $pi_short;
  ?>
 
 
