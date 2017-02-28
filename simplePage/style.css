@@ -20,3 +20,7 @@ a {
 	width: 630px;
 	padding: 5px;
 }
+img {
+	padding: 4px;
+	border: 1px solid #aaa;
+}
