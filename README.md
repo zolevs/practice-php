@@ -18,3 +18,4 @@
 - 25.02 - /sandbox/ test2502  test2502_2 test2502_3 - buttons
 - 26.02 - /sandbox/ test2602 - string function
 - 27.02 - /sandbox/ test2702 - string function; test2702_2 - date function
+- 28.02 - Simple dynamic page /simplePage/
