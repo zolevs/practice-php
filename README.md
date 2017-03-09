@@ -25,3 +25,4 @@
 - 07.03 - /form/ Simple Form index0703
 - 08.03 - /form - test0803 / Print data from the form
 - 09.03 - /sandbox/ test0903 Day of the week
+- 09.03 - /sandbox/ test0903_2 Calculator
