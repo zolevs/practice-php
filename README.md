@@ -22,7 +22,8 @@
 - 02.03 - /sandbox/ Array and menu
 - 04.03 - /sandbox/ Array and image
 - 06.03 - /sandbox/ few lines of function
-- 07.03 - /form/ Simple Form index0703
-- 08.03 - /form - test0803 / Print data from the form
+- 07.03 - /forma/ Simple Form index0703
+- 08.03 - /forma - test0803 / Print data from the form
 - 09.03 - /sandbox/ test0903 Day of the week
 - 09.03 - /sandbox/ test0903_2 Calculator
+- 10.03 - /forma - test1003/ Determining browser
