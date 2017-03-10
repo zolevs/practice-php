@@ -27,3 +27,4 @@
 - 09.03 - /sandbox/ test0903 Day of the week
 - 09.03 - /sandbox/ test0903_2 Calculator
 - 10.03 - /forma - test1003/ Determining browser
+- 10.03 - /forma - test1003_2 / Browser redirecting
