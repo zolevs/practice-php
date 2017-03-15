@@ -32,3 +32,4 @@
 - 12.03 - /forma - test1203 / Singe page form processing
 - 13.03 - /forma/contactForm-index / Kontakt forma
 - 14.03 - /login/ login, logout, create database
+- 15.03 - /sendMail/ Send mail using popular lib. PHPMailer
