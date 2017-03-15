@@ -16,7 +16,7 @@
 		$mejl -> SMTPSecure = 'tls';
 
 		$mejl -> Username = "ivanovic.zozon@gmail.com";
-		$mejl -> Password = "zozon1974";
+		$mejl -> Password = "ovde ide pass";
 
 	// parametri za slanje mejla
 

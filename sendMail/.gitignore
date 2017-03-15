@@ -1,2 +1,4 @@
-# ignore everything in the directory
+# ignore everything in the director
+# https://github.com/PHPMailer/PHPMailer
+
 /phpmejl/*
