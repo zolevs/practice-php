@@ -33,3 +33,4 @@
 - 13.03 - /forma/contactForm-index / Kontakt forma
 - 14.03 - /login/ login, logout, create database
 - 15.03 - /sendMail/ Send mail using popular lib. PHPMailer
+- 16.03 - /login/ styling
