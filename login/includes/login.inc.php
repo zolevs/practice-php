@@ -2,7 +2,7 @@
 
 session_start();
 
-include 'dbh.php';
+include '../dbh.php';
 
 $uid = $_POST['uid'];
 $pwd = $_POST['pwd'];
@@ -18,4 +18,4 @@ if(!$row = mysqli_fetch_assoc($result)){
 	// naziv sesije je proizvoljan ovde je eto tako stavljen id, bezveze
 }
 
-header("Location: index.php");
+header("Location: ../index.php");

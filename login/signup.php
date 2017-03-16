@@ -1,22 +1,25 @@
 <?php
+	include 'header.php';
+?>
 
-session_start();
 
-include 'dbh.php';
+<?php
 
-$first = $_POST['first'];
-$last = $_POST['last'];
-$uid = $_POST['uid'];
-$pwd = $_POST['pwd'];
+	if(isset($_SESSION['id'])){
+		echo $_SESSION['id'];
+	} else {
+		echo "You are not logged in.";
+	}
 
-// echo $first."<br/>";
-// echo $last."<br/>";
-// echo $uid."<br/>";
-// echo $pwd."<br/>";
-// za test
+ ?>
 
-$sql = "INSERT INTO user (first, last, uid, pwd) VALUES ('$first', '$last', '$uid', '$pwd')";
-// obrati paznju na znake navodnika jer u ovome slucaju ako bi isto stavili " bilo bi problema jer bi ponistili prve znaci OBAVEZNO '
-$result = mysqli_query($conn, $sql);
+	<form method="POST" action="includes/signup.inc.php">
+		<input type="text" name="first" placeholder="Enter your first name"><br/>
+		<input type="text" name="last" placeholder="Enter your last name"><br/>
+		<input type="text" name="uid" placeholder="Enter your username"><br/>
+		<input type="password" name="pwd" placeholder="Enter your password"><br/>
+		<button type="submit">Sing up</button>
+	</form>
 
-header("Location: index.php");
+</body>
+</html>
