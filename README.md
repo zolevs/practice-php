@@ -34,3 +34,4 @@
 - 14.03 - /login/ login, logout, create database
 - 15.03 - /sendMail/ Send mail using popular lib. PHPMailer
 - 16.03 - /login/ styling
+- 17.03 - /sandbox - htmlstrip/ strip_tags from entered text
