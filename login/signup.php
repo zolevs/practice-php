@@ -13,7 +13,7 @@
 
  ?>
 
-	<form method="POST" action="includes/signup.inc.php">
+	<form method="GET" action="includes/signup.inc.php">
 		<input type="text" name="first" placeholder="Enter your first name"><br/>
 		<input type="text" name="last" placeholder="Enter your last name"><br/>
 		<input type="text" name="uid" placeholder="Enter your username"><br/>

@@ -27,7 +27,7 @@
 					<input type='text' name='uid' placeholder='username'>
 					<input type='password' name='pwd' placeholder='password'>
 					<button type='submit'>Login</button>
-				</form>";
+					</form>";
 				}
 
 
