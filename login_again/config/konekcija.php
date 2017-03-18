@@ -9,12 +9,12 @@
 
 	$konekcija = mysql_connect("$server","$username_server","$password_server");
 	if ($konekcija){
-		echo "Uspesna konekcija na server."."<br/>";
+	//	echo "Uspesna konekcija na server."."<br/>";
 		$selekcija = mysql_select_db($baza, $konekcija);
 			if ($selekcija){
-				echo "Selekcija BAZE je uspesna"."<br/>";
+				// echo "Selekcija BAZE je uspesna"."<br/>";
 			}else{
-				echo "Selekcija BAZE je ne uspesna"."<br/>";
+				// echo "Selekcija BAZE je neuspesna"."<br/>";
 			}
 	} else {
 		echo "Neuspesna konekcija na server."."<br/>";
