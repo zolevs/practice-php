@@ -1,3 +1,4 @@
+
 <?php
 
 	if(isset($_POST['reg'])){
@@ -13,9 +14,36 @@
 
 
 		echo "<br/>$username_form<br/>$password_form<br/>$email_form<br>$ime_form<br/>$prezime_form<br>$dan_form<br>$mesec_form<br>$godina_form<br/>";
+
+		$folder = "profil/slike/";
+		// $folder = $folder.basename($_POST['profil']);
+		// bilo je problema dokle nije stavljeno u zaglavlje forme enctype= .....
+		$folder = $folder.basename($_FILES['profil']['name']);
+		// print_r ($folder);
+		$privremeni_naziv = $_FILES['profil']['tmp_name'];
+		$originalni_naziv = $_FILES['profil']['name'];
+
+		$delovi_naziva = pathinfo($originalni_naziv);
+		// print_r($delovi_naziva);
+		$ekstenzija = $delovi_naziva['extension'];
+
+		$prvi=rand(1,100000);
+		$drugi=rand(1,100000);
+		$treci=rand(1,100000);
+		// echo ("$prvi<br/>$drugi<br/>$treci");
+
+		$slucajni_naziv = $prvi ."-". $drugi."-".$treci;
+
+		$konacni_fajl = $slucajni_naziv.".".$ekstenzija;
+
+
+		$putanja = "profil/slike/".$konacni_fajl;
+
+		echo "$folder <br/> $privremeni_naziv <br/> $originalni_naziv <br/> $ekstenzija <br/> $slucajni_naziv <br/> $konacni_fajl <br/> $putanja";
+
 	} else {
  ?>
-		<form action="index.php?opcija=registracija" method="POST">
+		<form action="index.php?opcija=registracija" method="POST" enctype="multipart/form-data">
 			<table>
 				<tr>
 					<th colspan="2">Registracija</th>
