@@ -5,6 +5,7 @@
 		echo "Dugme<br/>";
 		$username_form 	= $_POST['username'];
 		$password_form 	= $_POST['password'];
+		$ponovi_form	= $_POST['ponovi'];
 		$email_form 	= $_POST['email'];
 		$ime_form 		= $_POST['ime'];
 		$prezime_form 	= $_POST['prezime'];
@@ -12,8 +13,10 @@
 		$mesec_form		= $_POST['mesec'];
 		$godina_form	= $_POST['godina'];
 
+		$datum_form 	= $godina_form."-".$mesec_form."-".$dan_form;
+		$datum 			= date($datum_form);
 
-		echo "<br/>$username_form<br/>$password_form<br/>$email_form<br>$ime_form<br/>$prezime_form<br>$dan_form<br>$mesec_form<br>$godina_form<br/>";
+		echo "<br/>$username_form<br/>$password_form<br/>$email_form<br>$ime_form<br/>$prezime_form<br>$dan_form<br>$mesec_form<br>$godina_form<br/>$datum<br/>";
 
 		$folder = "profil/slike/";
 		// $folder = $folder.basename($_POST['profil']);
@@ -41,14 +44,30 @@
 
 		$putanja = "profil/slike/".$konacni_fajl;
 
-		echo "$folder <br/> $privremeni_naziv <br/> $originalni_naziv <br/> $ekstenzija <br/> $slucajni_naziv <br/> $konacni_fajl <br/> $putanja <br/> $velicina_slike <br/> $tip_slike";
+		echo "$folder <br/> $privremeni_naziv <br/> $originalni_naziv <br/> $ekstenzija <br/> $slucajni_naziv <br/> $konacni_fajl <br/> $putanja <br/> $velicina_slike <br/> $tip_slike <br/>";
+		// provera dali je sifra uredu
+		if($password_form==$ponovi_form){
+			$korisnik = mysql_query("
+					SELECT * FROM 'korisnici'
+					WHERE 'username' = '$username_form'
+					OR 'email' = '$email_form'
+				");
+			$brojac = mysql_num_rows($korisnik);
+			if($brojac == 0){
 
-		if (move_uploaded_file($privremeni_naziv,$putanja)) {
-			echo "Kopirana slika";
-		}else {
-			echo "Nije uspelo kopiranje";
+
+				if (move_uploaded_file($privremeni_naziv,$putanja)) {
+					echo "Kopirana slika";
+				}else {
+					echo "Nije uspelo kopiranje";
+				}
+			} else {
+				echo "Greska. Korisnik postoji. Za ponovo odaberite <a href='index.php?opcija=registracija'> link";
+			}
+		} else {
+			echo "Greska. Passwordi nisu isti.<br/> Za ponovo odaberite <a href='index.php?opcija=registracija'> link";
 		}
-
+		// provera sifre end
 	} else {
  ?>
 		<form action="index.php?opcija=registracija" method="POST" enctype="multipart/form-data">
@@ -57,19 +76,23 @@
 					<th colspan="2">Registracija</th>
 				</tr>
 				<tr>
-					<td>username</td><td><input type="text" name="username"></td>
+					<td>username</td><td><input type="text" name="username" required></td>
 				</tr>
 				<tr>
-					<td>password</td><td><input type="password" name="password"></td>
+					<td>password</td><td><input type="password" name="password" required></td>
 				</tr>
 				<tr>
-					<td>email</td><td><input type="text" name="email"></td>
+					<td>ponovi</td><td><input type="password" name="ponovi" required></td>
+				</tr>
+
+				<tr>
+					<td>email</td><td><input type="text" name="email" required></td>
 				</tr>
 				<tr>
-					<td>ime</td><td><input type="text" name="ime"></td>
+					<td>ime</td><td><input type="text" name="ime" required></td>
 				</tr>
 				<tr>
-					<td>prezime</td><td><input type="text" name="prezime"></td>
+					<td>prezime</td><td><input type="text" name="prezime" required></td>
 				</tr>
 				<tr>
 					<td>datum rodjenja</td>
@@ -106,7 +129,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td>slika</td><td><input type="file" name="profil"></td>
+					<td>slika</td><td><input type="file" name="profil" accept="image/*" required></td>
 				</tr>
 				<tr>
 					<td colspan="2"><input type="submit" name="reg" value="Registruj se"></th>
