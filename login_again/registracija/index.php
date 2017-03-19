@@ -36,10 +36,18 @@
 
 		$konacni_fajl = $slucajni_naziv.".".$ekstenzija;
 
+		$velicina_slike = $_FILES['profil']['size'];
+		$tip_slike = $_FILES['profil']['type'];
 
 		$putanja = "profil/slike/".$konacni_fajl;
 
-		echo "$folder <br/> $privremeni_naziv <br/> $originalni_naziv <br/> $ekstenzija <br/> $slucajni_naziv <br/> $konacni_fajl <br/> $putanja";
+		echo "$folder <br/> $privremeni_naziv <br/> $originalni_naziv <br/> $ekstenzija <br/> $slucajni_naziv <br/> $konacni_fajl <br/> $putanja <br/> $velicina_slike <br/> $tip_slike";
+
+		if (move_uploaded_file($privremeni_naziv,$putanja)) {
+			echo "Kopirana slika";
+		}else {
+			echo "Nije uspelo kopiranje";
+		}
 
 	} else {
  ?>
