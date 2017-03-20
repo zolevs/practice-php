@@ -45,19 +45,39 @@
 		$putanja = "profil/slike/".$konacni_fajl;
 
 		echo "$folder <br/> $privremeni_naziv <br/> $originalni_naziv <br/> $ekstenzija <br/> $slucajni_naziv <br/> $konacni_fajl <br/> $putanja <br/> $velicina_slike <br/> $tip_slike <br/>";
+
 		// provera dali je sifra uredu
 		if($password_form==$ponovi_form){
+
 			$korisnik = mysql_query("
 					SELECT * FROM 'korisnici'
 					WHERE 'username' = '$username_form'
 					OR 'email' = '$email_form'
 				");
+			echo mysql_error();
 			$brojac = mysql_num_rows($korisnik);
 			if($brojac == 0){
 
-
 				if (move_uploaded_file($privremeni_naziv,$putanja)) {
 					echo "Kopirana slika";
+
+					$prvi=rand(1,100000);
+					$drugi=rand(1,100000);
+					$treci=rand(1,100000);
+					$slucajni_kod = $prvi ."-". $drugi."-".$treci;
+
+					mysql_query("
+						INSERT INTO 'korisnici'
+						SET 'username'	= '$username_form',
+							'password' 	= '$password_form',
+							 'email' 	= '$email_form',
+							 'ime' 		= '$ime_form',
+							 'prezime' 	= '$prezime_form',
+							 'datum' 	= '$datum',
+							 'slika'	= '$putanja',
+							 'code'		= '$slucajni_kod'
+						");
+
 				}else {
 					echo "Nije uspelo kopiranje";
 				}
