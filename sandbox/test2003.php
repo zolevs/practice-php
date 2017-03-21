@@ -22,6 +22,7 @@
 		display_welcome();
 	}
 
+//
 function validate_data(){
 	global $errors;
 	if($_REQUEST["FirstName"] == "") {
@@ -32,6 +33,7 @@ function validate_data(){
 	}
 }
 
+//
 function display_errors(){
 	global $errors;
 
@@ -39,6 +41,8 @@ function display_errors(){
 		echo $err."<br/>";
 	}
 }
+
+//
 function process_data(){
 	echo "Your first name is ";
 	echo $_REQUEST["FirstName"];
@@ -56,7 +60,7 @@ function display_welcome(){
 
 
 
-	echo "<form method='POST' action='test2003.php'>";
+	echo "<form method='GET' action='test2003.php'>";
 		echo "What is yor name";
 		echo " <input name='FirstName' type='text' value='$first_name'> ";
 		echo " <input name='LastName' type='text' value='$last_name'> ";

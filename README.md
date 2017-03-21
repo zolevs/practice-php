@@ -37,3 +37,4 @@
 - 17.03 - /sandbox - htmlstrip/ strip_tags from entered text
 - 18.03 - /login_again/ Login
 - 20.03 - /sandbox/ Preserve data
+- 21.03 - /sandbox/ class
