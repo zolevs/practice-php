@@ -20,6 +20,8 @@
 		echo "<br/>";
 
 		print "<p> $firstName </p>";
+
+		print "This is start ".$firstName.' " this is end."';
 	 ?>
 </body>
 </html>
