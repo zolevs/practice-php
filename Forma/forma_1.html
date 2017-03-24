@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>This is form</title>
+</head>
+<body>
+	<h3>What is your name:</h3>
+	<form method="GET" action="html_forms.php">
+
+	<p>
+		First Name:
+		<input type="text" name="firstname">
+	</p>
+	<p>
+		Last Name:
+		<input type="text" name="lastname">
+	</p>
+	<p>
+		Your age:
+		<input type="text" name="age">
+	</p>
+	<p>
+		Position: <br/>
+		<select name="position" size="1">
+			<option value="Administrator">administrator</option>
+			<option value="Faculty">Faculty</option>
+			<option value="Staff">Staff -1 </option>
+		</select>
+	</p>
+	<p><textarea type="text" name="comment" cols="30" rows="10"></textarea></p>
+	<p>Employee Type:</p>
+	<input type="radio" name="etype" value="FullTime" > FULLTIME
+	<input type="radio" name="etype" value="parttime" checked="checked"> Parttime
+	<p>Degrees Received</p>
+	<input type="checkbox" name="ba" value="BA">Ba
+	<input type="checkbox" name="ma" value="MA">MA
+	<input type="checkbox" name="phd" value="PhD">PhD
+	<p></p>
+	<hr>
+	<p>
+		<input type="submit" name="" value="Submit information">
+	</p>
+
+	</form>
+</body>
+</html>
