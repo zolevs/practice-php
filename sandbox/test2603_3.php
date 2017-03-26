@@ -9,10 +9,11 @@
 		$firstname = $_POST['firstname'];
 		$city = $_POST['city'];
 
-		if ($city != "City_3") {
-			print "<p> You dont live in the best city</p>";
-		} else {
+		// if ($city != "City_3") {
+		if (! ($city == "City_1" || $city == "City_2") ){
 			print "<p> Vrsac Rocks !!!</p>";
+		} else {
+			print "<p> You dont live in the best city</p>";
 		}
 		print " -- END -- ";
 	 ?>
