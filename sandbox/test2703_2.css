@@ -1,0 +1,21 @@
+body {
+	background-color: #ddd;
+}
+#fruits {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 350px;
+	height: 400px;
+	padding: 10px;
+	background-color: #e6e6fa;
+}
+#yourage {
+	position: absolute;
+	top: 10px;
+	left: 400px;
+	width: 350px;
+	height: 400px;
+	padding: 10px;
+	background-color: #e6e6fa;
+}
