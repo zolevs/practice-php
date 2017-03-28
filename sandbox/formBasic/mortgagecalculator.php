@@ -6,46 +6,60 @@
 </head>
 <body>
 	<img src="KingLogo.jpg">
-	<div id="left">
+<div id="left">
 	<h3> Mortgage calculator </h3>
 		<?php
 
 			$amount = $_GET['amount'];
 			$rate = $_GET['rate'];
 
+			$msg = "";
+			$error_cnt = 0;
 			// echo "$amount<br/>$rate";
 			if (empty($amount)){
-				print "It is empty. Amount.";
-				print "<br> Go BACK and try again.";
-				print "</body> </html>";
-				exit;
-			} if (empty($rate)) {
-				print "It is empty. Rate.";
-				print "<br> Go BACK and try again.";
-				print "</body> </html>";
-				exit;
-			}else{
-				if(!is_numeric($amount)){
-					print "It is not numeric value.";
-					print "<br> Go BACK and try again.";
-					print "</body> </html>";
-					exit;
-				} if(!is_numeric($rate)){
-					print "It is not numeric value.";
-					print "<br> Go BACK and try again.";
-					print "</body> </html>";
-					exit;
+				$msg .= "<br>Please enter an amount<br/>";
+				$error_cnt++;
+			} else {
+				if (!is_numeric($amount)) {
+					$msg .="<br>Amount entered".$amount." is not numeric.";
+					// Ovde na nije cilj da odstampamo odmah gresku vec da deo greska savuvamo za citav niz gresaka
+					$error_cnt++;
 				}
 			}
-			print "If you finance $amount at an interest rate of ".$rate."% ...<br>";
 
-			$monthly_payment = ($amount*$rate) / 12;
+			if(empty($rate)){
+				$msg .= "Please enter an interest rate<br/>";
+				$error_cnt++;
+				} else {
+					if	(!is_numeric($rate)){
+						$msg .="<br>Interest rate entered ".$rate." is not numeric";
+						$error_cnt++;
+					}
+				}
 
+			// print "If you finance $amount at an interest rate of ".$rate."% ...<br>";
 
-			print "Your monthly payment would be $".number_format($monthly_payment, 2);
+			$calc = $rate/100;
+			$monthly_payment = ($amount*$calc) / 12;
 
+			$round = number_format($monthly_payment, 2);
 
+			// print "Your monthly payment would be $".number_format($monthly_payment, 2);
 		 ?>
+		 <div id="styling">
+		 	<?php
+
+		 		if($error_cnt>0){
+		 			print "$msg";
+		 		} else {
+		 			print "Mortage Calculator";
+		 			print "If you finace $".$amount." at an interest rate of ".$rate."%";
+		 			print "Your Monthly payment would be $".$round;
+		 		}
+
+
+		 	 ?>
+		 </div>
 	</div>
 </body>
 </html>
