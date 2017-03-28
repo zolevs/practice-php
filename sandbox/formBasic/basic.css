@@ -1,0 +1,17 @@
+body {
+	background-color: #f39c12 ;
+}
+#left, #right {
+	background-color: #bdc3c7;
+	position: absolute;
+	padding: 20px;
+	top: 100px;
+	width: 310px;
+	height: 450px;
+}
+#left {
+	left: 10px;
+}
+#right {
+	left: 380px;
+}
