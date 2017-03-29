@@ -32,7 +32,25 @@
 	}
 	fclose($fp);
  ?>
+<h4>Appending to FILE</h4>
+<?php
+	$filename = $document_root.'/sandbox/data/'.'glist_2.txt';
+		$fp = fopen($filename, 'a'); //opens file for appending
+		$cntr = 1;
+		while (true){
+			$item_html_name = 'item'.$cntr;
+			$item = $_POST[$item_html_name];
+			if (empty($item)){
+				break;
+			}
+			$cntr++;
+			print "Item: ".$item."<br/>";
+			$output_line = $item."\n";
+			fwrite($fp, $output_line);
+		}
+		fclose($fp);
 
+ ?>
 
 
 
