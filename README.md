@@ -42,3 +42,4 @@
 - 26.03 - /sandbox/ simple math in table
 - 27.03 - /sandbox/ test fields and some tests, same date for file names
 - 28.03 - /sandbox - formBasic / calculator
+- 29.03 - /sandbox - readfile_2903, writetofile_2903/ reading and writing from a file
