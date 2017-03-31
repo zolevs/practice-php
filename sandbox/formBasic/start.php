@@ -10,7 +10,7 @@
 
 		<h3>Please singn up our guest list and a representative will contact you soon.</h3>
 
-		<form method="GET" action="contact.php">
+		<form method="GET" action="guestbook.php">
 			<p>
 				First name: <br/>
 				<input type="text" name="firstname" size="20">
@@ -46,11 +46,10 @@
 					 		$numberCity = $ii.".".$city;
 					 		print $numberCity;
 					 	?>
-					 	<option value="<?php print $numberCity; ?>"> <?php print $numberCity; ?> </option>;
+					 	<option value="<?php print $city; ?>"> <?php print $numberCity; ?> </option>;
 					 <?php
 					 	}
 					 ?>
-
 
 					<!-- <option value="Chickago">Chickago</option>
 					<option value="New York">New York</option>
