@@ -1,2 +1,6 @@
-Zoran|Ivanovic|zolevs@gmail.com|Los Angeles|No comments 1233|
-Goran|Zivanovic|zolevs@gmail.com|Los Angeles|No comments 2233|
+Ankic|Milan|phone|1234|Berlin|03.31.17|no|
+Ivanovic|Zoran|email|zolevs@gmail.com|Berlin|03.31.17|None|
+Ivanovic|Dragan|phone|44444|Los Angeles|03.31.17|Comment|
+Ankic|Milan|phone|1234|Berlin|03.31.17|no|
+Ivanovic|Zoran|email|zolevs@gmail.com|Berlin|03.31.17|None|
+Ivanovic|Dragan|phone|44444|Los Angeles|03.31.17|Comment|

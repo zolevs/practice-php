@@ -20,6 +20,7 @@
 			$town = $_GET['town'];
 			$comment = $_GET['comment'];
 
+			$date = date("m.d.y");
 
 			print "Information submitted for: $firstname $lastname <br/><br/>";
 			print "Your contact $contact is: $contactinfo ";
@@ -38,7 +39,7 @@
 			$filename = $document_root.'/sandbox/formBasic/'.'guestbook.txt';
 			$fp = fopen($filename, 'a');
 
-			$output_line = $firstname.'|'.$lastname.'|'.$contactinfo.'|'.$town.'|'.$comment.'|'."\n";
+			$output_line = $lastname.'|'.$firstname.'|'.$contact.'|'.$contactinfo.'|'.$town.'|'.$date.'|'.$comment.'|'."\n";
 			// fwrite ($fp, $firstname);
 			// fwrite ($fp, $lastname);
 			// fwrite ($fp, $contactinfo);

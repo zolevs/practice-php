@@ -48,12 +48,10 @@
 					 	?>
 					 	<option value="<?php print $city; ?>"> <?php print $numberCity; ?> </option>;
 					 <?php
+					 fclose($fp);
 					 	}
 					 ?>
 
-					<!-- <option value="Chickago">Chickago</option>
-					<option value="New York">New York</option>
-					<option value="Vrsac">Vrsac</option> -->
 				</select>
 			</p>
 
@@ -64,6 +62,7 @@
 			<br>
 			<input type="submit" name="" value="Submit data">
 		</form>
+	<p><a href="view_guestbook.php"> View guest book  ---></a></p>
 	</div> <!-- END left div -->
 
 	<div id="right"> <!-- right div -->
