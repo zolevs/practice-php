@@ -44,3 +44,5 @@
 - 28.03 - /sandbox - formBasic / calculator
 - 29.03 - /sandbox - readfile_2903, writetofile_2903/ reading and writing from a file
 - 31.03 - /sandbox - formBasic/ start.php - guestbook read & write
+
+- 05.04 - /sandbox/ function read, in, out
