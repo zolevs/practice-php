@@ -12,10 +12,10 @@
 		$rtr_info = doStartup();
 
 		print "<br/> Institution : ".$institution;
-		print "<br/> Class : ".$class;
-		print "<br/> Class type : ".$class_type;
+		print "<br/> Class : ".$class; // out of scope
+		print "<br/> Class type : ".$class_type; //out of scope
 		print "<br/> rtr_info : ".$rtr_info;
-		print "<br/> Degree: ".$degree;
+		print "<br/> Degree: ".$degree; // funkcija nemoze da joj pristupi ali ovde mozemo
 
 		// Function
 
