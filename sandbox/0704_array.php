@@ -34,9 +34,23 @@
 		print "<br/>".$ii." : ".$teamMembers[$array_index];
 	}
 
-
  ?>
 
+<h2>Part 2 - team members</h2>
+<?php
+	$teamMembers = array();
+
+	for ($ii = 1; $ii <= 5; $ii++){
+		$member_html_name = 'item'.$ii;
+		$member = $_GET[$member_html_name];
+
+		array_push($teamMembers, $member);
+
+		$array_index = $ii - 1;
+		print "<br/>".$ii." : ".$teamMembers[$array_index];
+	}
+
+ ?>
 
 </body>
 </html>
