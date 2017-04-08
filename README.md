@@ -47,3 +47,5 @@
 
 - 05.04 - /sandbox/ function read, in, out
 - 06.04 - /sandbox 0604_ / Variable scope, return multiple value from function
+- 07.04 - /sandbox/ array
+- 08.04 - /sandbox/ array
