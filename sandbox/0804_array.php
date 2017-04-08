@@ -17,8 +17,20 @@
 	}
 
 	sort($teamMembers);
-	print_r($teamMembers);
+ ?>
+
+<h4>Team 1:</h4>
+
+<?php
+
+	$arrLen = sizeof($teamMembers);
+
+	for ($jj = 0; $jj < $arrLen; $jj++) {
+		$display_num = $jj + 1;
+		print "<br/>".$display_num.": ".$teamMembers[$jj];
+	}
 
  ?>
+
 </body>
 </html>
