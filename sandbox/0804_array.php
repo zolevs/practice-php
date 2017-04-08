@@ -31,6 +31,16 @@
 	}
 
  ?>
+ <h4>Team 2</h4>
 
+	<?php
+
+		$cntr = 0;
+
+		foreach($teamMembers as $element){
+			$cntr ++; // samo za brojac ispred elementa
+			print "<br/>".$cntr.": ".$element;
+		}
+	 ?>
 </body>
 </html>
