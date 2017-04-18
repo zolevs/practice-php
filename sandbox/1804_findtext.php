@@ -13,7 +13,7 @@
 		}
 		$document_root = $_SERVER['DOCUMENT_ROOT'];
 		$dirname = $document_root."/sandbox/images/";
-		// echo $document_root;
+		echo $dirname."<br/>";
 		$dirhandle = opendir($dirname);
 
 		if($dirhandle){
@@ -28,15 +28,16 @@
 		function displayPropertyInfo($image_filename, $find_city){
 			// get image file
 			$imagename = 'images/'.$image_filename;	// jpg file
+			// echo $imagename;
 			$house_img = "<p><img src='".$imagename."'></p>";
 			// get image index information
 			$index_filename = str_replace('.jpg', '.txt', $image_filename);
 			$filename = 'houses_indexed/'.$index_filename; // txt file
 			echo $filename;
-			exhit;
+			// exit;
 			$fp = fopen($filename,'r');
 			$show_house = 'Y'; //default value
-		}
+		// }
 		while(true){
 			$line = fgets($fp);
 			if (feof($fp)){
@@ -80,6 +81,7 @@
 			print "Bed/Baths: $bedrooms / $baths <br/>";
 			print "Price: ".$price."<br/><br/>";
 		}
+	}
 	 ?>
 </body>
 </html>
