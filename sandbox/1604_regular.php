@@ -25,9 +25,9 @@
 			print "<h4> Searching for Team member names that Begins with: $find_name </h4>";
 			foreach ($teamMembers as $member) {
 				$pattern = '/^'.$find_name.'/i'; // matched beginning of string
-
+				// print $pattern."<br>";
 				$num_of_matches = preg_match($pattern, $member);
-
+				// print "num_of_matches : ".$num_of_matches."<br>";
 				if( $num_of_matches > 0 ){
 					print "<br/> $num_of_matches Team members found: ".$member;
 				}
