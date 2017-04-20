@@ -3,4 +3,4 @@ Ivanovic|Zoran|email|zolevs@gmail.com|Berlin|03.31.17|None|
 Ivanovic|Dragan|phone|44444|Los Angeles|03.31.17|Comment|
 Ankic|Milan|phone|1234|Berlin|03.31.17|no|
 Ivanovic|Zoran|email|zolevs@gmail.com|Berlin|03.31.17|None|
-Ivanovic|Dragan|phone|44444|Los Angeles|03.31.17|Comment|
+Ivanovic|Dragan|phone|44444|Los Angeles|03.31.17|Comment||||||04.20.17||
