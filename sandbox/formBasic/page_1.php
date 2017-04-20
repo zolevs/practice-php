@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Real estate Home page</title>
+	<!-- <link rel="stylesheet" type="text/css" href="basic.css"> -->
 	<link rel="stylesheet" type="text/css" href="basic.css">
 </head>
 <body>
@@ -27,7 +28,8 @@
 		<h4 style="color: blue;">Our realtors</h4>
 
 	<?php
-			// call function to display realtors
+		// call function to display realtors
+		displayRealtors();
 	?>
 	</div>
 
@@ -53,3 +55,25 @@
 </body>
 </html>
 
+<?php
+
+	function displayRealtors() {
+		$document_root = $_SERVER['DOCUMENT_ROOT'];
+		$dirname = $document_root."/sandbox/realtors";
+		// echo $dirname."<br/>";
+		$dirhandle = opendir($dirname);
+		if ($dirhandle){
+			while (false !== ($file = readdir($dirhandle))) {
+				if ($file != '.' && $file !='..'){
+					print "<p> <img src='/sandbox/realtors/".$file."'>";
+
+					$imagename_minus_ext = str_replace('.jpg', '', $file);
+					$realtor_name = ucfirst($imagename_minus_ext);
+
+					print "<br/>".$realtor_name."</p>\n";
+				}
+			}
+		}
+	}
+
+ ?>
