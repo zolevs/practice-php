@@ -34,7 +34,7 @@
 	</div>
 
 	<div id="findhome">
-		<form method="post" action="homelist.php">
+		<form method="POST" action="homelist.php">
 			<p><strong>Enter city:</strong>
 				<input type="text" name="find_city" size="20"> <br/>
 				(Leave blank to find all houses listed)
